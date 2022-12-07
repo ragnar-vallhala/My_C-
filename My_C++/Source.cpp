@@ -1,19 +1,16 @@
 #include "header1.h"
-#include <iostream>
+#include <math.h>
 
-int count{ 0 };
-void print1::print(std::string& str) {
-	std::cout << str <<"\tprint1" << std::endl;
-	count++;
-}
-void print2::print(std::string& str) {
-	std::cout << str << "\tprint2" << std::endl;
-	count++;
+double Box::volume(double num) {
+	return height * width * length*num;
 }
 
-void print_that(std::string& str) {
-	print1::print(str);
+double Box::diagonal() {
+	return sqrt(height * height + width*width + length*length );
 }
-void print_this(std::string& str) {
-	print2::print(str);
+
+Box::Box(double lengthVal,double widthVal,double heightVal){
+	length = lengthVal;
+	width = widthVal;
+	height = heightVal;
 }

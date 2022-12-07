@@ -1,15 +1,16 @@
-#ifndef HEADER
-#include <string>
-#define HEADER
-namespace print1 {
-	void print(std::string&);
-}
-namespace print2 {
-	void print(std::string&);
-}
+#ifndef BOX_H
+#define BOX_H
 
-void print_this(std::string&);
-void print_that(std::string&);
-
+class Box {
+private:
+	double length{ 1.0 };
+	double width{ 1.0 };
+	double height{ 1.0 };
+public:
+	double volume(double num=1);
+	double diagonal();
+	Box() = default;
+	Box(double lengthVal, double widthVal, double heightVal);
+};
 
 #endif
